@@ -1,0 +1,37 @@
+import Rodado.*
+
+test  "Corsa"{
+
+	var  corsa= new Rodado() 
+	corsa.peso(1300)
+	corsa.capacidad(4)
+	assert.equals(4, corsa.capacidad())
+}
+
+test "Kwid sin gas"{
+	var kwidSinGas = new Rodado()
+	kwidSinGas.capacidad(4)
+	kwidSinGas.velocidad(120)
+	kwidSinGas.peso(1200)
+	kwidSinGas.color("azul")
+	assert.equals(4, kwidSinGas.capacidad())
+	assert.equals(120, kwidSinGas.velocidad())
+	assert.equals(1200, kwidSinGas.peso())
+	assert.equals("azul", kwidSinGas.color())
+	
+}
+
+test "Kwid con gas"{
+	var kwidConGas = new Rodado()
+	kwidConGas.tieneGas(true)
+	kwidConGas.capacidad(4)
+	kwidConGas.velocidad(120)
+	kwidConGas.peso(1200)
+	kwidConGas.color("azul")
+	assert.equals(3, kwidConGas.capacidad())
+	assert.equals(110, kwidConGas.velocidad())
+	assert.equals(1350, kwidConGas.peso())
+	assert.equals("azul", kwidConGas.color())
+
+}
+
