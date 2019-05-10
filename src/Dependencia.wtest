@@ -1,0 +1,13 @@
+import Rodado.*
+import Dependencia.*
+
+describe "dependencia deportes" {
+
+	
+	test "cantidad de empleados"{
+		var dependenciaDeporte = new Dependencia()
+		dependenciaDeporte.empleados(45)
+		assert.equals(45, dependenciaDeporte.empleados())
+		}
+}
+
